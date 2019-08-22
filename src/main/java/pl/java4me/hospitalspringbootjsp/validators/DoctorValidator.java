@@ -10,7 +10,7 @@ import org.springframework.validation.Validator;
 import pl.java4me.hospitalspringbootjsp.entities.Doctor;
 
 
-@Component//po to zeby spring mogl znalezc ten walidator i go wstrzyknac w klasie RegisterController w miejscu @Autowired UserValidator userValidator;
+@Component//po to zeby spring mogl znalezc ten walidator i go wstrzyknac w klasie AddDoctorController w miejscu @Autowired DoctorValidator doctorValidator;
 public class DoctorValidator implements Validator {
 
 //	@Override// u niego jest ta adnotacja, ale u mnie blad wiec usunalem
@@ -26,7 +26,7 @@ public class DoctorValidator implements Validator {
 		
 		
 		validate(ValidatorEnum.FIRSTNAME, doctor.getFirstName(), "firstName", errors);//metoda przeciazona
-		validate(ValidatorEnum.LASTNAME, doctor.getFirstName(), "lastName", errors);
+		validate(ValidatorEnum.LASTNAME, doctor.getLastName(), "lastName", errors);
 		validate(ValidatorEnum.PESEL, doctor.getPesel(), "pesel", errors);
 		validate(ValidatorEnum.PASSWORD, doctor.getPassword(), "password", errors);
 
@@ -55,7 +55,7 @@ public class DoctorValidator implements Validator {
 		String patternReg = validator.getPattern();
 		Pattern pattern = Pattern.compile(patternReg);
 		Matcher matcher = pattern.matcher(value);
-		if(!matcher.matches()) {//jesli wystapil blad to wywoluje metode refectValue
+		if(!matcher.matches()) {//jesli wystapil blad to wywoluje metode rejectValue
 			errors.rejectValue(fieldName, validator.getErrCode(), validator.getErrMessage());
 		}
 	}
