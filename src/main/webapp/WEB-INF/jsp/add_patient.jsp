@@ -19,38 +19,38 @@
 			
 			<div class="form-group">
 				<label>Patient First Name</label>
-				<form:input path="firstName" placeholder="First Name" type="text" class="form-control" /> <!-- path przypina nazwy pol do kontrolek -->
-  				<form:errors path="firstName" style="color:red" class="form-text text-muted" />  
+				<form:input path="firstName" placeholder="First Name" type="text" class="form-control" style="width:300px"/> <!-- path przypina nazwy pol do kontrolek -->
+  				<form:errors path="firstName" style="color:red; width:300px" class="form-text text-muted" />  
 			</div>
 		
 			<div class="form-group">
 				<label>Patient Last Name</label>
-				<form:input path="lastName" placeholder="Last Name" type="text" class="form-control" />
-				<form:errors path="lastName" style="color:red" class="form-text text-muted" />  
+				<form:input path="lastName" placeholder="Last Name" type="text" class="form-control" style="width:300px"/>
+				<form:errors path="lastName" style="color:red; width:300px" class="form-text text-muted" />  
 			</div>
 			
 			<!--  
 			<div class="form-group">
 				<label>Date Of Birth</label>
-				<form:input path="dateOfBirth" placeholder="dd-MM-yyyy" type="text" class="form-control" />
-				<form:errors path="dateOfBirth" style="color:red" class="form-text text-muted" />  
+				<form:input path="dateOfBirth" placeholder="dd-MM-yyyy" type="text" class="form-control" style="width:300px"/>
+				<form:errors path="dateOfBirth" style="color:red; width:300px" class="form-text text-muted" />  
 			</div>
 			-->
 			
 			<div class="form-group">
 				<label>Pesel</label>
-				<form:input path="pesel" placeholder="01234567890" type="text" class="form-control" />
-				<form:errors path="pesel" style="color:red" class="form-text text-muted" />  
+				<form:input path="pesel" placeholder="01234567890" type="text" class="form-control" style="width:300px"/>
+				<form:errors path="pesel" style="color:red; width:300px" class="form-text text-muted" />  
 			</div>
 	
 			<div class="form-group">
 				<label>Password</label>
-				<form:input path="password" placeholder="Password" type="password" class="form-control" />
-				<form:errors path="password" style="color:red" class="form-text text-muted" />
+				<form:input path="password" placeholder="Password" type="password" class="form-control" style="width:300px"/>
+				<form:errors path="password" style="color:red; width:300px" class="form-text text-muted" />
 				<br/>
 				<label>Confirm password</label>
-				<form:input path="confirmPassword" placeholder="Confirm Password" type="password" class="form-control" />
-				<form:errors path="confirmPassword" style="color:red" class="form-text text-muted" />
+				<form:input path="confirmPassword" placeholder="Confirm Password" type="password" class="form-control" style="width:300px"/>
+				<form:errors path="confirmPassword" style="color:red; width:300px" class="form-text text-muted" />
 			</div>		
 			
 			<form:button type="submit" class="btn btn-success">Add new doctor</form:button>
